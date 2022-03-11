@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+
+$mainbgclr: hsl(233, 47%, 7%);
+$cardbgclr: hsl(244, 38%, 16%);
+$accentclr: hsl(277, 64%, 61%, 0.6);
+
+
+$neutralclr-1: hsl(0, 0%, 100%);
+$mainparagraphclr: hsla(0, 0%, 100%, 0.75);
+$statheadingclr: hsla(0, 0%, 100%, 0.6);
+$border-radius: 0.625rem;
+
+
+
+html, body {
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $mainbgclr;
+}
+
+.container {
+    display: flex;
+    margin: auto;
+    background-color: $cardbgclr;
+    border-radius: $border-radius;
+    max-width: 70rem;
+    max-height: 43.75rem;
+
+
+    .txt-wrapper {
+        padding: 4.375rem 7.5rem 4.375rem 4.375rem;
+
+        h1 {
+            color: $neutralclr-1;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 2.188rem;
+
+            span {
+                color: $accentclr;
+            }
+        }
+    
+        p {
+            color: $mainparagraphclr;
+            font-size: 0.938em;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            margin-top: 1.875rem;
+        }
+
+         > div {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 4.375rem;
+            margin-right: 3.125rem;
+        }
+
+        > div span {
+            color: $mainparagraphclr;
+            font-family: 'Lexend Deca', sans-serif;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            color: $neutralclr-1;
+            font-size: 1.563rem;
+            font-family: 'Lexend Deca', sans-serif;
+            margin-bottom: 0.313rem;
+        }
+        
+    }
+
+    .img {
+        border-top-right-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+        background-image: url("images/image-header-desktop.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        width: 120%;
+        position: relative;
+    }
+
+    .img::before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $accentclr;
+        border-top-right-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+    }
+
+}
+
+.attribution {
+    color: white;
+}
+
+
+@media (max-width:  72.5em) {
+    .container {
+        max-width: 25em;
+        position: relative;
+        margin: 1.25em;
+        flex-direction: column;
+
+         .txt-wrapper {
+            margin-top: 15.625em;
+            padding: 1.25em;
+    
+            h1 {
+                font-size: 1.6875em;
+                text-align: center;
+            }
+    
+            p {
+                text-align: center;
+                margin-top: 0.625em;
+            }
+
+            > div {
+            flex-direction: column;
+            align-items: center;
+            margin: 1.25em 0 auto auto;
+            text-align: center;
+            }
+
+            > div > div {
+                margin-bottom: 1.25em;
+            }
+
+            > div > div h2 {
+                font-size: 1.25em;
+            }
+        }
+
+        .img {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 35%;
+            background-size: cover;
+            border-top-left-radius: $border-radius;
+            border-bottom-right-radius: 0;
+        }
+
+        .img::before {
+            border-top-left-radius: $border-radius;
+        } 
+    
+    }
+    
+
+
+    }
+
+@media (max-width: 37.5em) {
+    .attribution {
+        display: none;
+    }
+}

@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+html, body {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #090b1a;
+}
+
+.container {
+  display: flex;
+  margin: auto;
+  background-color: #1b1938;
+  border-radius: 0.625rem;
+  max-width: 70rem;
+  max-height: 43.75rem;
+}
+.container .txt-wrapper {
+  padding: 4.375rem 7.5rem 4.375rem 4.375rem;
+}
+.container .txt-wrapper h1 {
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 2.188rem;
+}
+.container .txt-wrapper h1 span {
+  color: rgba(170, 92, 219, 0.6);
+}
+.container .txt-wrapper p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.938em;
+  font-family: "Inter", sans-serif;
+  line-height: 1.7;
+  margin-top: 1.875rem;
+}
+.container .txt-wrapper > div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4.375rem;
+  margin-right: 3.125rem;
+}
+.container .txt-wrapper > div span {
+  color: rgba(255, 255, 255, 0.75);
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+.container .txt-wrapper h2 {
+  color: white;
+  font-size: 1.563rem;
+  font-family: "Lexend Deca", sans-serif;
+  margin-bottom: 0.313rem;
+}
+.container .img {
+  border-top-right-radius: 0.625rem;
+  border-bottom-right-radius: 0.625rem;
+  background-image: url("images/image-header-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 120%;
+  position: relative;
+}
+.container .img::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(170, 92, 219, 0.6);
+  border-top-right-radius: 0.625rem;
+  border-bottom-right-radius: 0.625rem;
+}
+
+.attribution {
+  color: white;
+}
+
+@media (max-width: 72.5em) {
+  .container {
+    max-width: 25em;
+    position: relative;
+    margin: 1.25em;
+    flex-direction: column;
+  }
+  .container .txt-wrapper {
+    margin-top: 15.625em;
+    padding: 1.25em;
+  }
+  .container .txt-wrapper h1 {
+    font-size: 1.6875em;
+    text-align: center;
+  }
+  .container .txt-wrapper p {
+    text-align: center;
+    margin-top: 0.625em;
+  }
+  .container .txt-wrapper > div {
+    flex-direction: column;
+    align-items: center;
+    margin: 1.25em 0 auto auto;
+    text-align: center;
+  }
+  .container .txt-wrapper > div > div {
+    margin-bottom: 1.25em;
+  }
+  .container .txt-wrapper > div > div h2 {
+    font-size: 1.25em;
+  }
+  .container .img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 35%;
+    background-size: cover;
+    border-top-left-radius: 0.625rem;
+    border-bottom-right-radius: 0;
+  }
+  .container .img::before {
+    border-top-left-radius: 0.625rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .attribution {
+    display: none;
+  }
+}/*# sourceMappingURL=styles.css.map */
